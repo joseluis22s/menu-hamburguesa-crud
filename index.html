@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="estilos/estilos.css" />
+    <title>Menu CRUD</title>
+  </head>
+
+  <body>
+    <dialog class="modal-delete">
+      <h2>Eliminar registro</h2>
+      <div class="container-modal-text"></div>
+      <p>¿Seguro que desea realizar esta acción?</p>
+      <div class="container-modal-buttons">
+        <button class="cerrar-modal">Cerrar</button>
+        <button class="aceptar-modal">Aceptar</button>
+      </div>
+    </dialog>
+    <dialog class="modal-create">
+      <h2>Resgitro agregado exitosamente</h2>
+    </dialog>
+    <header>
+      <img class="logo" src="imagenes/Logo.png" alt="Logo de la página" />
+      <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+      <nav class="nav" id="nav">
+        <button id="cerrar" class="cerrar-menu">
+          <i class="bi bi-x-circle"></i>
+        </button>
+        <ul class="nav-list">
+          <li><a href="#">Inicio CRUD</a></li>
+          <li><a href="#">Create</a></li>
+          <li><a href="#">Read</a></li>
+          <li><a href="#">Updtade</a></li>
+          <li><a href="#">Delete</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1>INICIO CRUD</h1>
+
+    <div class="container-crud">
+      <form>
+        <h3>Registro de persona</h3>
+        <div class="divs-form">
+          <label>Nombre</label>
+          <input type="text" name="nombre" id="inputNombre" />
+        </div>
+
+        <div class="divs-form">
+          <label>Apellido</label>
+          <input type="text" name="apellido" id="inputApellido" />
+        </div>
+
+        <div class="divs-form">
+          <label>Edad</label>
+          <input type="number" name="edad" id="inputEdad" />
+        </div>
+
+        <div class="divs-form">
+          <label>Sexo</label>
+          <input type="" name="sexo" id="inputSexo" />
+        </div>
+
+        <div class="divs-form">
+          <label>Fecha de nacimiento</label>
+          <input type="date" name="fecha" id="inputFecNac" />
+        </div>
+        <div class="div-btn">
+          <button class="btn-registrar1" type="button">Registrar</button>
+        </div>
+      </form>
+
+      <div class="container-table">
+        <table>
+          <colgroup>
+            <col style="font-style: italic" />
+          </colgroup>
+          <caption>
+            CRUD
+          </caption>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>NOMBRE</th>
+              <th>APELLIDO</th>
+              <th>EDAD</th>
+              <th>SEXO</th>
+              <th>FECHA DE NACIMIENTO</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+  </body>
+</html>
